@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.card{
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    filter: grayscale(80%);
+}
+.card:hover{
+    border-radius: 10px;
+    filter: grayscale(0%);
+}
+.back{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: .3s ease-in-out;
+  width: 100%;
+  height: 200%;
+  overflow: hidden;
+}
+.card-1{
+    background: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+.card-1:hover~.back{
+    opacity: 1;
+    background: url(1.jpg);
+    background-size: 100%;
+    filter: blur(2px) grayscale(80%);
+    z-index: 0;
+}
+.card-2{
+    background: url(2.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+.card-2:hover~.back{
+    opacity: 1;
+    background: url(2.jpg);
+    background-size: 100%;
+    filter: blur(2px) grayscale(80%);
+    z-index: 0;
+}
+.card-3{
+    background: url(3.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+.card-3:hover~.back{
+    opacity: 1;
+    background: url(3.jpg);
+    background-size: 100%;
+    filter: blur(2px) grayscale(80%);
+    z-index: 0;
+}
